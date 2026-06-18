@@ -1,0 +1,120 @@
+.bgViewport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: hsla(202, 71%, 14%, 1);
+    background: linear-gradient(90deg, hsla(202, 71%, 14%, 1) 0%, hsla(176, 45%, 45%, 1) 100%);
+}
+
+.parallaxWrapper {
+    position: absolute;
+    top: -2%;
+    left: -2%;
+    width: 104%;
+    height: 104%;
+    will-change: transform;
+}
+
+.networkCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.vignetteOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+            circle at center,
+            transparent 40%,
+            hsla(202, 71%, 14%, 0.4) 75%,
+            hsla(202, 71%, 14%, 1) 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+}
+
+.glowSpotlight {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120vw;
+    height: 120vh;
+    background: radial-gradient(
+            circle at center,
+            rgba(131, 208, 203, 0.08) 0%,
+            hsla(202, 71%, 14%, 0) 70%
+    );
+    pointer-events: none;
+    z-index: 3;
+}
+
+.hudOverlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    z-index: 10;
+}
+
+.header {
+    text-align: center;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.8em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 12px;
+    font-weight: 300;
+}
+
+.statusPill {
+    display: inline-block;
+    padding: 6px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #62b5b0;
+    transition: all 1s ease-in-out;
+}
+
+.hudBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
+.metric {
+    margin-bottom: 6px;
+    color: #fff;
+}
+
+.val {
+    color: #62b5b0;
+    font-weight: bold;
+}

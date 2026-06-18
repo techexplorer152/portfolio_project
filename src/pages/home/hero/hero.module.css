@@ -1,0 +1,36 @@
+.heroLayout {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    margin-top: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.rightSideVisual {
+    width: 100%;
+    max-width: 900px;
+    height: 70vh;
+    max-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+    .heroLayout {
+        padding: 1rem;
+    }
+
+    .rightSideVisual {
+        height: 50vh;
+    }
+}

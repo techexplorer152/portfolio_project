@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './navbar.module.css';
 
 interface NavLink {
@@ -8,10 +8,32 @@ interface NavLink {
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [isHidden, setIsHidden] = useState<boolean>(false);
+    const [lastScrollY, setLastScrollY] = useState<number>(0);
 
     const toggleMenu = (): void => {
         setIsOpen(!isOpen);
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY && currentScrollY > 80) {
+                setIsHidden(true);
+            } else {
+                setIsHidden(false);
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollY]);
 
     const navigationLinks: NavLink[] = [
         { name: 'Home', path: '/home' },
@@ -21,12 +43,12 @@ const Navbar: React.FC = () => {
     ];
 
     return (
-        <nav className={styles.container}>
+        <nav className={`${styles.container} ${isHidden ? styles.containerHidden : ''}`}>
             <div className={styles.wrapper}>
 
                 <div className={styles.logoArea}>
                     <span className={styles.pulseDot}></span>
-                    <span className={styles.logoText}>SYS_NODE // TECHEXPLORER</span>
+                    <span className={styles.logoText}>Orson Cena</span>
                 </div>
 
                 <div className={styles.navLinks}>
@@ -51,7 +73,6 @@ const Navbar: React.FC = () => {
 
             <div className={`${styles.mobileMenu} ${isOpen ? styles.menuOpen : ''}`}>
                 <div className={styles.mobileLinksWrapper}>
-                    <span className={styles.mobileTerminalTag}>&gt;&gt; SELECT_NODE_PATH</span>
                     {navigationLinks.map((link) => (
                         <a
                             key={link.path}

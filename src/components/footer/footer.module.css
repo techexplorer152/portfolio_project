@@ -1,0 +1,259 @@
+.container {
+    background-color: rgba(240, 240, 240, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 200px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+    padding-top: 140px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.27);
+}
+
+.banner {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    width: 70%;
+    background: #3B82F6;
+    border-radius: 15px;
+    min-height: 220px;
+    padding: 24px;
+    gap: 24px;
+}
+
+.banner > div:first-child {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.banner_email {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.banner_email h1 {
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.banner textarea {
+    width: 100%;
+    max-width: 620px;
+    height: 60px;
+    padding: 18px 24px;
+    font-size: 13px;
+    line-height: 1.5;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1F2937;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-family: inherit;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    resize: none;
+}
+
+.banner textarea:focus {
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
+}
+
+.banner textarea::placeholder {
+    color: #6B7280;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 300px;
+        padding-top: 240px;
+    }
+
+    .banner {
+        flex-direction: column;
+        width: 90%;
+        top: -220px;
+        height: auto;
+    }
+
+    .banner > div:first-child,
+    .banner_email {
+        flex: none;
+        width: 100%;
+    }
+}
+
+.row2 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 2fr;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.brandColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.brandLogoSection {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brandLogoSection h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.brandDescription {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #64748b;
+    margin: 0;
+    max-width: 280px;
+}
+
+.socialIconsGroup {
+    display: flex;
+    gap: 16px;
+    margin-top: 4px;
+}
+
+.socialIconsGroup a img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.socialIconLink {
+    color: #0f172a;
+    transition: transform 0.2s ease;
+}
+
+.socialIconLink:hover {
+    transform: translateY(-2px);
+}
+
+.linkColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.linkColumn h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 6px 0;
+}
+
+.linkColumn a {
+    font-size: 0.95rem;
+    color: #334155;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.linkColumn a:hover {
+    text-decoration: underline;
+}
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+@media (max-width: 968px) {
+    .row2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .brandColumn {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .row2 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .brandColumn {
+        grid-column: span 1;
+    }
+}
+
+.row3 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 24px 20px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyrightText {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.subFooterLinks {
+    display: flex;
+    gap: 24px;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.subFooterLinks a {
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.subFooterLinks a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .row3 {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
