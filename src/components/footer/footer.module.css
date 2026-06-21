@@ -46,17 +46,26 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 100%;
 }
 
 .banner_email h1 {
     font-size: 24px;
     color: #ffffff;
     line-height: 1.3;
+    margin: 0;
+}
+
+.banner_form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 620px;
 }
 
 .banner textarea {
     width: 100%;
-    max-width: 620px;
     height: 60px;
     padding: 18px 24px;
     font-size: 13px;
@@ -70,6 +79,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     resize: none;
+    box-sizing: border-box;
 }
 
 .banner textarea:focus {
@@ -81,6 +91,34 @@
 .banner textarea::placeholder {
     color: #6B7280;
     opacity: 1;
+}
+
+.submitBtn {
+    align-self: flex-start;
+    padding: 10px 24px;
+    background-color: #111827;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.submitBtn:hover:not(:disabled) {
+    background-color: #1f2937;
+    transform: translateY(-1px);
+}
+
+.submitBtn:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+.submitBtn:disabled {
+    background-color: rgba(17, 24, 39, 0.6);
+    cursor: not-allowed;
 }
 
 @media (max-width: 768px) {
@@ -100,6 +138,12 @@
     .banner_email {
         flex: none;
         width: 100%;
+    }
+
+    .submitBtn {
+        align-self: fill;
+        width: 100%;
+        text-align: center;
     }
 }
 

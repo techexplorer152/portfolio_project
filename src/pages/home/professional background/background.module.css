@@ -1,44 +1,67 @@
-.Head_of_me{
+.container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Head_of_me {
     width: 100%;
     min-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     background-color: #13192e;
     color: white;
-
     border: 1px #353333 solid;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 3rem;
 }
 
+.Head_of_me h1 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.Head_of_me p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    margin: 0;
+}
 
 .virtual_intern {
-  display: flex;
+    display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
-    gap: 50px;
-
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 3rem;
+    box-sizing: border-box;
 }
 
 .virtual_intern img {
-    max-height: 350px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1.25rem;
 }
 
 .virtual_intern > div {
-    margin: 50px;
+    flex: 1;
     background-color: #3c3b3b;
-    max-width: 400px;
-    height: 600px;
+    max-width: 500px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-sizing: border-box;
 }
 
 .virtual_intern > div:hover {
@@ -66,7 +89,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin: 0;
+    margin-top: auto;
     padding: 0;
 }
 
@@ -88,9 +111,15 @@
     background: rgba(255, 255, 255, 0.08);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
     .virtual_intern {
-        display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .virtual_intern > div {
+        width: 100%;
+        max-width: 100%;
     }
 }

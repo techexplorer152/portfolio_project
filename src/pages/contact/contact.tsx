@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './contact.module.css';
 import Email_img from './img/mail (1).png';
 import Whats_img from './img/whatsapp-white-icon.png';

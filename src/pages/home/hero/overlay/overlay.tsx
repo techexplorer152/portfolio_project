@@ -3,13 +3,11 @@ import styles from './overlay.module.css';
 const Overlay = () => {
 
     const handlePrimaryClick = () => {
-        console.log("Primary action triggered.");
-        // Example: router.push('/projects') or scrollToSection('#projects')
+        window.location.hash = 'projects';
     };
 
     const handleSecondaryClick = () => {
-        console.log("Secondary action triggered.");
-        // Example: window.open('/resume.pdf', '_blank')
+        window.location.hash = 'contact';
     };
 
     return (
