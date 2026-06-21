@@ -35,11 +35,12 @@ const Navbar: React.FC = () => {
         };
     }, [lastScrollY]);
 
+
     const navigationLinks: NavLink[] = [
-        { name: 'Home', path: '/home' },
-        { name: 'Projects', path: '/projects' },
-        { name: 'Stack', path: '/stack' },
-        { name: 'Contact', path: '/contact' }
+        { name: 'Home', path: '#home' },
+        { name: 'Projects', path: '#projects' },
+        { name: 'Stack', path: '#stack' },
+        { name: 'Contact', path: '#contact' }
     ];
 
     return (

@@ -1,0 +1,123 @@
+.sectionWrapper {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.sectionHeader {
+    padding: 40px;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    text-align: center;
+}
+
+.title {
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ed6905, #fff303);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    color: #38bdf8;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.card {
+    background: #848485;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(56, 189, 248, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.browserHeader {
+    display: flex;
+    gap: 0.4rem;
+    padding: 0.8rem 1.2rem;
+    background-color: rgba(7, 130, 95, 0.37);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background-color: rgba(7, 130, 95, 0.37);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.Img_Items {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .Img_Items {
+    transform: scale(1.04);
+}
+
+.cardContent {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cardContent h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    color: #ffffff;
+}
+
+.cardContent p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 968px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}

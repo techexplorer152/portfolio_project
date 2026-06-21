@@ -1,0 +1,97 @@
+.scopeContainer {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.tableHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.tableHeader h2 {
+    margin: 0;
+    color: #2d3748;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.registrationNo {
+    font-size: 0.85rem;
+    color: #718096;
+    background-color: #f7fafc;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+.scopeTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.scopeTable th {
+    background-color: #4a5568;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 14px 18px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.scopeTable th:first-child {
+    border-top-left-radius: 6px;
+}
+
+.scopeTable th:last-child {
+    border-top-right-radius: 6px;
+}
+
+.scopeTable td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.topicCell {
+    font-weight: 600;
+    color: #1a202c !important;
+    width: 40%;
+}
+
+.detailsCell {
+    width: 60%;
+}
+
+.scopeTable tbody tr:nth-of-type(even) {
+    background-color: #f8fafc;
+}
+
+.scopeTable tbody tr:hover {
+    background-color: #f1f5f9;
+    transition: background-color 0.2s ease;
+}
+
+@media (max-width: 600px) {
+    .tableHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .scopeTable th, .scopeTable td {
+        padding: 12px;
+    }
+}

@@ -192,27 +192,13 @@ const HeroBackground = () => {
         };
     }, [stateIdx]);
 
-    const activeViz = visualizations[stateIdx];
-
     return (
         <div className={styles.bgViewport}>
             <div ref={containerRef} className={styles.parallaxWrapper}>
                 <canvas ref={canvasRef} className={styles.networkCanvas} />
             </div>
-
             <div className={styles.vignetteOverlay} />
             <div className={styles.glowSpotlight} />
-
-            <div className={styles.hudOverlay}>
-                <div className={styles.header}>
-                    <div className={styles.title} id="main-title">{activeViz.title}</div>
-                    <div className={styles.statusPill} id="status-text">{activeViz.description}</div>
-                </div>
-                <div className={styles.hudBottom}>
-                    <div className={styles.metric}>INTENSITY_INDEX: <span className={styles.val}>{activeViz.intensity.toFixed(2)} GW</span></div>
-                    <div className={styles.metric}>DOPPLER_SCALE: <span className={styles.val}>{activeViz.dopplerShift.toFixed(2)}</span></div>
-                </div>
-            </div>
         </div>
     );
 };
