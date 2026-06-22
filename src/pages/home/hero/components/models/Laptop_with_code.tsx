@@ -3,11 +3,11 @@ import { useGraph } from '@react-three/fiber'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
 
-export function Model(props) {
-  const group = React.useRef()
-  const { scene, animations } = useGLTF('/models/laptop_with_code-transformed.glb')
+export function Model(props: any) {
+  const group = React.useRef<any>()
+  const { scene, animations } = useGLTF('/models/laptop_with_code-transformed.glb') as any
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
-  const { nodes, materials } = useGraph(clone)
+  const { nodes, materials } = useGraph(clone) as any
   const { actions } = useAnimations(animations, group)
 
   useEffect(() => {
